@@ -1,3 +1,19 @@
 .about-page{
     text-align: center !important;
 }
+.login{
+    margin-top: 20px;
+    color: black;
+}
+.login:hover{
+    background: blue;
+    color: aliceblue;
+}
+.registation{
+    margin-top: 20px;
+    color: black;
+}
+.registation:hover{
+    background: blue;
+    color: aliceblue;
+}

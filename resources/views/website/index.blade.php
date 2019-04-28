@@ -43,6 +43,7 @@
     <link href="{{asset('website/style.css')}}" rel="stylesheet">
     {{-- Coustome CSS --}}
     <link href="{{asset('website/css/stylecoustom.css')}}" rel="stylesheet">
+    @yield('css')
    
     <!-- Google fonts -->
     <link href='http://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>   
@@ -87,20 +88,11 @@
                 <li class="active"><a href="{{url('home')}}">Home</a></li>
                 <li><a href="{{url('about')}}">About Us</a></li>
                 <li><a href="{{url('courses')}}">Course</a></li>
-                <li><a href="scholarship.html">Scholarship</a></li>
                 <li><a href="events-archive.html">Events</a></li>
-                <li><a href="gallery.html">Gallery</a></li>                
-                <li><a href="blog-archive.html">Blog</a></li>
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Page<span class="caret"></span></a>
-                  <ul class="dropdown-menu" role="menu">
-                    <li><a href="404.html">404 Page</a></li>
-                    <li><a href="#">Link Two</a></li>
-                    <li><a href="#">Link Three</a></li>               
-                  </ul>
-                </li>               
-                <li><a href="contact.html">Contact</a></li>
-              </ul>           
+                <li><a href="gallery.html">Gallery</a></li>
+                <a href="{{ route('login') }}" class="btn btn-info login" style="margin-top: 20px;">Login</a>
+                <a href="{{ route('register') }}" class="btn btn-info registation" style="margin-top: 20px;">Register</a>
+              </ul>         
             </div><!--/.nav-collapse -->
           </div>     
         </nav>  
@@ -229,10 +221,13 @@
    
     <!-- Custom js-->
     <script src="{{asset('website/js/custom.js')}}"></script>
+
+    @yield('js')
     <!--=============================================== 
     Template Design By WpFreeware Team.
     Author URI : http://www.wpfreeware.com/
     ====================================================-->
+
 
 
   </body>
