@@ -1,0 +1,13 @@
+.auth {
+    margin: 60px auto;
+}
+
+.nav-color {
+    color: black;                                                                          ;
+}
+
+.nav-color:hover {
+    color: black;  
+    background:#ccc; 
+    transition: 0.5s;                                                                       ;
+}
