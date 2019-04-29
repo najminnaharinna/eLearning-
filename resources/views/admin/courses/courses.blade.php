@@ -28,21 +28,33 @@
         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
           <thead>
             <tr>
-              <th>Serial No</th>
+              <th>Category</th>
               <th>Title</th>
+              <th>Approve</th>
               <th class="text-right">Action</th>
             </tr>
           </thead> 
           <tbody>
             @foreach ($courses as $course)
             <tr>
-                <td>{{ $course->id }}</td>
+                <td>{{ $course->category->title }}</td>
                 <td>{{ $course->title }}</td>
+                <td>
+                  @if ($course->is_approved == 1)
+                      <span class="badge badge-success">Approve</span>
+                  @else 
+                      <span class="badge badge-warning">Pandding</span>
+                  @endif
+                </td>
+
                 <td class="text-right">
                   <form action="{{ url('admin/courses/'.$course->id) }}" method="POST">
                     @csrf
                     @method('delete')
-                    <a href="{{ url('admin/courses/'.$course->id.'/edit') }}" class="btn btn-info">Edit</a>
+                    @if ($course->is_approved != 1)
+                    <a href="{{ url('admin/courses/'.$course->id.'/approve') }}" class="btn btn-info">Approve</a>    
+                    @endif
+                    
                     <button type="submit" onclick="return confirm('Are you sure?')" class="btn btn-danger">Delete</button>
                   </form>
                 </td>

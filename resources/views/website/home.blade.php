@@ -1,9 +1,56 @@
 @extends('website.index')
 
-@section('slider')
- 
+@section('menu')
+    <!--=========== BEGIN HEADER SECTION ================-->
+    <header id="header">
+        <!-- BEGIN MENU -->
+        <div class="menu_area">
+          <nav class="navbar navbar-default navbar-fixed-top" role="navigation">  <div class="container">
+              <div class="navbar-header">
+                <!-- FOR MOBILE VIEW COLLAPSED BUTTON -->
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <!-- LOGO -->
+                <!-- TEXT BASED LOGO -->
+                <a class="navbar-brand" href="index.html">ONLINE <span>Aducation</span></a>              
+                <!-- IMG BASED LOGO  -->
+                 <!-- <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="logo"></a>  -->            
+                       
+              </div>
+              <div id="navbar" class="navbar-collapse collapse">
+                <ul id="top-menu" class="nav navbar-nav navbar-right main-nav">
+                  <li class="active"><a href="{{url('home')}}">Home</a></li>
+                  <li><a href="{{url('about')}}">About Us</a></li>
+                  <li><a href="{{url('courses')}}">Course</a></li>
+                  <li><a href="events-archive.html">Gallery</a></li>
+                  <li><a href="{{ url('contact') }}">Contact</a></li>
+  
+                  @if(Auth::check())
+                  @include('includes.user-menu')
+                  @else 
+                  <a href="{{ route('login') }}" class="btn btn-info login">Login</a>
+                  <a href="{{ route('register') }}" class="btn btn-info registation">Register</a>
+                  @endif
+  
+                </ul>         
+              </div><!--/.nav-collapse -->
+            </div> 
+           
+          </nav>  
+          
+  
+        </div>
+        <!-- END MENU -->    
+      </header>
+      <!--=========== END HEADER SECTION ================-->  
+@endsection
 
-  <div id="carouselExampleIndicators" class="carousel slide container-fluid" data-ride="carousel">
+@section('slider')
+   <div id="carouselExampleIndicators" class="carousel slide container-fluid" data-ride="carousel">
       <ol class="carousel-indicators">
         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
         <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>

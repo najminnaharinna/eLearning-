@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -63,43 +64,7 @@
     <a class="scrollToTop" href="#"></a>
     <!-- END SCROLL TOP BUTTON -->
 
-    <!--=========== BEGIN HEADER SECTION ================-->
-    <header id="header">
-      <!-- BEGIN MENU -->
-      <div class="menu_area">
-        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">  <div class="container">
-            <div class="navbar-header">
-              <!-- FOR MOBILE VIEW COLLAPSED BUTTON -->
-              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              <!-- LOGO -->
-              <!-- TEXT BASED LOGO -->
-              <a class="navbar-brand" href="index.html">ONLINE <span>Aducation</span></a>              
-              <!-- IMG BASED LOGO  -->
-               <!-- <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="logo"></a>  -->            
-                     
-            </div>
-            <div id="navbar" class="navbar-collapse collapse">
-              <ul id="top-menu" class="nav navbar-nav navbar-right main-nav">
-                <li class="active"><a href="{{url('home')}}">Home</a></li>
-                <li><a href="{{url('about')}}">About Us</a></li>
-                <li><a href="{{url('courses')}}">Course</a></li>
-                <li><a href="events-archive.html">Events</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <a href="{{ route('login') }}" class="btn btn-info login" style="margin-top: 20px;">Login</a>
-                <a href="{{ route('register') }}" class="btn btn-info registation" style="margin-top: 20px;">Register</a>
-              </ul>         
-            </div><!--/.nav-collapse -->
-          </div>     
-        </nav>  
-      </div>
-      <!-- END MENU -->    
-    </header>
-    <!--=========== END HEADER SECTION ================--> 
+    @yield('menu')
 
     @yield('slider')
     

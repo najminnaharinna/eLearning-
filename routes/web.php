@@ -29,6 +29,7 @@ Route::get('home', function () {
 
 Route::get('home','website\HomePageController@index');
 Route::get('about','website\AboutPageController@index');
+Route::get('contact','website\ContactsController@index');
 
 Route::get('courses','website\CoursesController@index');
 Route::get('courses/{id}','website\CoursesController@show')->name('course-details');
@@ -50,6 +51,7 @@ Route::middleware(['auth', 'admin'])->prefix('admin')->group(function () {
     Route::delete('users/{id}', 'admin\UserController@delete')->name('admin.users.show');
 
     Route::resource('courses', 'admin\CoursesController')->except('show');
+    Route::get('courses/{id}/approve', 'admin\CoursesController@approve');
 
 });
 

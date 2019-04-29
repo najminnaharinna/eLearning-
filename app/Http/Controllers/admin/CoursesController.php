@@ -50,9 +50,15 @@ class CoursesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function approve($id)
     {
-        //
+        $course = Course::find($id);
+        $course->is_approved = 1;
+        $course->save();
+
+        flash('Approve Successfully')->success();
+
+        return redirect()->to('admin/courses');
     }
 
     /**
