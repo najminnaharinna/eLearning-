@@ -3,13 +3,14 @@
 @section('content')
     
     <!--Form with header-->
-    <div class="card container">
+    <div class="card container" style="margin-top:100px; margin-bottom: 20px;">
   
             <!--Header-->
             <div class="header peach-gradient">
         
               <div class="row d-flex justify-content-center">
-                <h3 class="white-text mb-0 py-5 font-weight-bold">Contact Us</h3>
+                <h3 class="white-text mb-0 py-5 font-weight-bold" style="margin-top: 45px; margin-bottom:25px; color:#02aeca; font-size:40px; text-align:center;text-decoration: underline;
+                font-weight: bolder;" >Contact Us</h3>
               </div>
         
             </div>
