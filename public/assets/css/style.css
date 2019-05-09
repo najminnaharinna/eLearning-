@@ -196,3 +196,40 @@
     overflow: hidden;
     transition: max-height 0.2s ease-out;
   } */
+
+/* Admin Panel */
+.admin{
+    color: #02aeca;
+    font-family: none;
+    text-decoration: underline;
+    font-size: 60px;
+    text-align: center;
+    margin-top: 210px;
+}
+
+/*  */
+.background{
+	background:#4e808c;
+}
+/* .text{
+	font-weight: bolder;
+	font-size: 28px;
+	color: rgb(5, 0, 0);
+} */
+.top_header_social li{
+	list-style: none;
+    display: inline-block;
+    margin-top: 20px;
+    background: #fff;
+}
+.top_header_social li a{
+    padding: 10px 10px;
+    background: #fff;
+    color:#000;
+}
+.social_icon li a:hover{
+	color:#fff;
+	background-color: #000;
+	border-radius: 10px;
+	transition: all 0.5s;
+}

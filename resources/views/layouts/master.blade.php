@@ -24,7 +24,7 @@
 
 </head>
 
-<body id="page-top">
+<body>
 
   <!-- Page Wrapper -->
   <div id="wrapper">
@@ -48,18 +48,10 @@
       </div>
       <!-- End of Main Content -->
 
-      <footer>
-          @yield('footer')
-      </footer>
+      @yield('footer')
 
       <!-- Footer -->
-      <footer class="sticky-footer bg-white">
-        <div class="container my-auto">
-          <div class="copyright text-center my-auto">
-            <span style="color:#000;">Copyright &copy; All Rights Reserved | Najmin Nahar's Website 2019</span>
-          </div>
-        </div>
-      </footer>
+      
       <!-- End of Footer -->
 
     </div>

@@ -45,7 +45,8 @@
 
                     
 
-                        <button type="submit" class="btn btn-primary float-right">Submit</button>
+                    <a href="{{url('users/password')}}" class="btn btn-success float-right">Cancel</a>
+                    <button type="submit" class="btn btn-primary float-right mr-1">Update</button>
 
                 {!! Form::close() !!}
             </div>

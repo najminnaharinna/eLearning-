@@ -23,7 +23,8 @@
                         @endif
                         <small id="texthelp" class="form-text text-muted">Name of category.</small>
                     </div>
-                        <button type="submit" class="btn btn-primary float-right">Submit</button>
+                    <a href="{{url('admin/categories')}}" class="btn btn-success float-right">Cancel</a>
+                        <button type="submit" class="btn btn-primary float-right mr-1">Update</button>
                 </form>
             </div>
         </div>

@@ -42,16 +42,28 @@ Route::get('lessons/{id}/{slug}','website\LessonsController@show')->name('lesson
 
 Route::middleware(['auth', 'admin'])->prefix('admin')->group(function () {
 
-    Route::get('/', 'admin\AdminController@index');
+    Route::get('/', 'admin\AdminController@admin');
+    Route::get('profile', 'admin\ProfileController@index')->name('admin.profile');
+    Route::put('profile/{id}', 'admin\ProfileController@profileupdate')->name('admin.profile.profileupdate');
+
+    Route::get('password', 'admin\PasswordController@index')->name('admin.password');
+    Route::put('password', 'admin\PasswordController@update')->name('admin.password.update');
 
     Route::resource('categories', 'admin\CategoriesController')->except(['show']);
 
     Route::get('users', 'admin\UserController@index');
     Route::get('users/{id}', 'admin\UserController@show')->name('admin.users.show');
     Route::delete('users/{id}', 'admin\UserController@delete')->name('admin.users.show');
+    Route::get('users/{id}/approve', 'admin\UserController@approve');
 
     Route::resource('courses', 'admin\CoursesController')->except('show');
     Route::get('courses/{id}/approve', 'admin\CoursesController@approve');
+
+    Route::get('sections', 'admin\SectionController@index');
+    Route::get('sections/{id}', 'admin\SectionController@destroy');
+
+    Route::get('lessons', 'admin\LessonController@index');
+    Route::get('lessons/{id}', 'admin\LessonController@destroy');
 
 });
 

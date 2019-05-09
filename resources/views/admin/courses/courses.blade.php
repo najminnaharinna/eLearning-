@@ -12,10 +12,8 @@
   @include('flash::message')
 
   <!-- Page Heading -->
-  <h1 class="h3 mb-2 text-gray-800">courses</h1>
+  <h1 class="h3 mb-2 text-gray-800">Courses</h1>
   
-    <a href="{{ url('admin/courses/create') }}" class="btn btn-primary float-right">Add courses</a>
-  <br><br>
 
 
   <!-- DataTales Example -->

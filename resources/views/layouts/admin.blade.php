@@ -5,6 +5,8 @@
 @section('css')
     <link href="{{asset('assets/css/style.css')}}" rel="stylesheet">
 @endsection
+
+
 @section('menubar')
     <!-- Topbar -->
     <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
@@ -182,9 +184,10 @@
 
     <!-- Nav Item - Dashboard -->
     <li class="nav-item">
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="{{ url('home') }}">
         <i class="fas fa-fw fa-tachometer-alt"></i>
-        <span>Dashboard</span></a>
+        <span class="btn btn-info btn-block" style="color:#fff;font-size: 15px;
+        font-weight: bold;">Go To Home </span></a>
     </li>
 
     <!-- Divider -->
@@ -194,6 +197,20 @@
     <div class="sidebar-heading">
         Admin
     </div>
+
+    <!-- Nav Item - Dashboard -->
+    <li class="nav-item">
+        <a class="nav-link" href="{{ url('admin/profile') }}">
+        <i class="fas fa-fw fa-tachometer-alt"></i>
+        <span> Profile </span></a>
+    </li>
+
+    <!-- Nav Item - Dashboard -->
+    <li class="nav-item">
+        <a class="nav-link" href="{{ url('admin/password') }}">
+        <i class="fas fa-fw fa-tachometer-alt"></i>
+        <span> Password </span></a>
+    </li>
 
     <!-- Nav Item - Dashboard -->
     <li class="nav-item">
@@ -218,14 +235,14 @@
 
     <!-- Nav Item - Dashboard -->
     <li class="nav-item">
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="{{ url('admin/sections') }}">
         <i class="fas fa-fw fa-tachometer-alt"></i>
         <span> Sections </span></a>
     </li>
 
     <!-- Nav Item - Dashboard -->
     <li class="nav-item">
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="{{ url('admin/lessons') }}">
         <i class="fas fa-fw fa-tachometer-alt"></i>
         <span> Lessons </span></a>
     </li>
@@ -251,8 +268,11 @@
         @yield('content')
 
         <!-- Page Heading -->
-        <h1 class="h3 mb-4 text-gray-800">Admin Page</h1>
 
+        
+        <h1 class="admin">Welcome Your Profile</h1>
+
+        
     </div>
 @endsection
 

@@ -176,9 +176,10 @@
 
         <!-- Nav Item - Dashboard -->
         <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="{{ url('home') }}">
             <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span>Dashboard</span></a>
+            <span class="btn btn-info btn-block" style="color:#fff;font-size: 15px;
+            font-weight: bold;">Go To Home</span></a>
         </li>
 
         <!-- Divider -->
@@ -203,6 +204,7 @@
             <span> Password </span></a>
         </li>
 
+        @if(Auth::user()->role == 'instructor')
         <br>
         <!-- Heading -->
         <div class="sidebar-heading">
@@ -217,8 +219,8 @@
             </a>
             <div id="courses" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-                <a class="collapse-item" href="{{ url('users/courses') }}"> Course List </a>
-                <a class="collapse-item" href="{{ url('users/courses/create') }}"> New Course </a>
+                <a class="collapse-item" href="{{ url('ss/courses') }}"> Course List </a>
+                <a class="collapse-item" href="{{ url('ss/courses/create') }}"> New Course </a>
             </div>
             </div>
         </li>
@@ -250,8 +252,8 @@
             </div>
             </div>
         </li>
-        
-
+       
+         @endif     
         <!-- Divider -->
         <hr class="sidebar-divider d-none d-md-block">
 
@@ -268,7 +270,7 @@
     <div class="container-fluid">
         @include('flash::message')
         <!-- Page Heading -->
-        <h1 class="h3 mb-4 text-gray-800">Users Page</h1>
+        <h1 class="admin">Welcome Your Profile</h1>
 
     </div>
 @endsection

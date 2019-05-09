@@ -30,3 +30,4 @@ font-weight: bolder;">Welcome Our Courses</h1>
 </div>
 
 @endsection
+

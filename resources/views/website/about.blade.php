@@ -70,8 +70,3 @@
     
 @endsection
 
-@section('about')
-<!--=========== BEGIN ABOUT US SECTION ================-->
-
-  <!--=========== END ABOUT US SECTION ================--> 
-@endsection

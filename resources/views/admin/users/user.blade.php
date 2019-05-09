@@ -28,7 +28,8 @@
               <th>Name</th>
               <th>Email</th>
               <th>Role</th>
-              <th class="text-right">Action</th>
+              <th>Approve</th>
+              <th class="text-right" style="width: 200px;">Action</th>
             </tr>
           </thead> 
           <tbody>
@@ -38,11 +39,23 @@
                 <td>{{ $user->name }}</td>
                 <td>{{ $user->email }}</td>
                 <td>{{ $user->role }}</td>
+                <td>
+                    @if ($user->is_approved == 1)
+                    <span class="badge badge-success">Approve</span>
+                    @else 
+                        <span class="badge badge-warning">Pandding</span>
+                    @endif
+                </td>
                 <td class="text-right">
-                    <form method="post" action="{{ url('admin/users/' . $user->id ) }}">
-                        <a href="{{ route('admin.users.show', $user->id) }}" class="btn btn-info"> View </a>
+                    <form method="post" action="{{ url('admin/users/' . $user->id ) }}" style="width: 215px;">
+                        {{-- <a href="{{ route('admin.users.show', $user->id) }}" class="btn btn-success btn-sm float-right"> View </a>
                         @csrf
                         @method('delete')
+                        <button type="submit" onclick="return confirm('Are You Sure?')" class="btn btn-danger btn-sm">Delete</button> --}}
+                        @if ($user->is_approved != 1)
+                        <a href="{{ url('admin/users/'.$user->id.'/approve') }}" class="btn btn-info btn-sm">Approve</a>    
+                        @endif
+                        <a href="{{ route('admin.users.show', $user->id) }}" class="btn btn-success">View</a>
                         <button type="submit" onclick="return confirm('Are You Sure?')" class="btn btn-danger">Delete</button>
                     </form>
                 </td>

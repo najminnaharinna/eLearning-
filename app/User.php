@@ -16,7 +16,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password','role',
+        'name', 'email', 'password','role','is_approved'
     ];
 
     /**
@@ -86,6 +86,11 @@ class User extends Authenticatable
             $arr [$section ->id] = $section->title;
         }
         return $arr;
+    }
+
+    public function scopeApproved($query)
+    {
+        return $query->where('is_approved',1);
     }
 
 }
