@@ -17,33 +17,38 @@
   </div>
 
     <div>
-      @foreach ($course->sections as $section)
-        <div class="accordion " id="accordionExample">
-          <div class="card">
-            <div class="card-header" id="headingOne">
-              <h2 class="mb-0">
-                <button class="btn btn-info btn-block col-md-6 float-left" style="font-weight: bolder;" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                  {{$section->title}}
-                </button>
-              </h2>
-            </div>
-        
-            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
-              <div class="card-body">
-                @foreach ($section->lessons as $lesson)
-                  <ul class="list-group col-md-6" style="text-align:center;">
-                    <a href="{{ route('lesson-details',[$lesson->id, str_slug($lesson->title)]) }}">
-                      <li class="list-group-item" style="margin-top:5px; background:#e4e4e4;" aria-disabled="true">{{$lesson->title}}
-                         <small>{{ $lesson->instructor->name }}</small></li>
-                    </a>
-                  </ul>
-                @endforeach
-                  
+        @if(Auth::user())
+        @foreach ($course->sections as $section)
+          <div class="accordion " id="accordionExample">
+            <div class="card">
+              <div class="card-header" id="headingOne">
+                <h2 class="mb-0">
+                  <button class="btn btn-info btn-block col-md-6 float-left" style="font-weight: bolder;" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    {{$section->title}}
+                  </button>
+                </h2>
+              </div>
+          
+              <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                <div class="card-body">
+                  @foreach ($section->lessons as $lesson)
+                    <ul class="list-group col-md-6" style="text-align:center;">
+                      <a href="{{ route('lesson-details',[$lesson->id, str_slug($lesson->title)]) }}">
+                        <li class="list-group-item" style="margin-top:5px; background:#e4e4e4;" aria-disabled="true">{{$lesson->title}}
+                          <small>{{ $lesson->instructor->name }}</small></li>
+                      </a>
+                    </ul>
+                  @endforeach
+                    
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      @endforeach
+        @endforeach
+        @else 
+        <p style="margin-bottom:50px;"><a class="btn btn-info" href="{{ route('register') }}" style="font-size: 30px;font-weight: bolder;">APPLY NOW</a></p>
+        @endif
+      
       
     </div>
 </div>

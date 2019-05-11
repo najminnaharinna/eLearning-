@@ -24,4 +24,11 @@ class InstructorMiddleware
             return redirect()->to('users');
         }
     }
+
+    protected function redirectTo($request)
+    {
+        if (! $request->expectsJson()) {
+            return route('login');
+        }
+    }
 }

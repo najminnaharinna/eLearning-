@@ -27,6 +27,8 @@ Route::get('home', function () {
     return view('website.home');
 });
 
+// Route::get('login','website\LoginController');
+
 Route::get('home','website\HomePageController@index');
 Route::get('about','website\AboutPageController@index');
 Route::get('contact','website\ContactsController@index');
