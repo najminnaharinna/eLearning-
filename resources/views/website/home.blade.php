@@ -33,10 +33,11 @@
     <!--=========== BEGIN WHY US SECTION ================-->
     <section>
       <!-- Start why us top -->
+    {{-- <div class="container-fluid"> --}}
       <div class="row">        
         <div class="col-lg-12 col-sm-12">
           <div class="whyus_top">
-            <div class="container">
+            {{-- <div class="container"> --}}
               <!-- Why us top titile -->
               <div class="row">
                 <div class="col-lg-12 col-md-12"> 
@@ -49,8 +50,8 @@
               </div>
               <!-- End Why us top titile -->
               <!-- Start Why us top content  -->
-              <div class="row change">
-                <div class="col-lg-3 col-md-3 col-sm-3">
+              <div class="row change" style="margin-top: 50px;">
+                <div class="col-lg-3 col-md-3 col-sm-12">
                   <div class="single_whyus_top wow fadeInUp" style="text-align:center; margin-top: 10px; color:#000;">
                     <div class="whyus_icon">
                       <span class="fa fa-desktop center" style="font-size:45px;"></span>
@@ -59,8 +60,8 @@
                     <p>when an unknown printer took a galley of type and scrambled it to make a type specimen book</p>
                   </div>
                 </div>
-                <div class="col-lg-3 col-md-3 col-sm-3">
-                  <div class="single_whyus_top wow fadeInUp" style="text-align:center; margin-top: 15px; color:#000;">
+                <div class="col-lg-3 col-md-3 col-sm-12">
+                  <div class="single_whyus_top wow fadeInUp" style="text-align:center; margin-top: 10px; color:#000;">
                     <div class="whyus_icon">
                       <span class="fa fa-users" style="font-size:45px;"></span>
                     </div>
@@ -68,7 +69,7 @@
                     <p>when an unknown printer took a galley of type and scrambled it to make a type specimen book</p>
                   </div>
                 </div>
-                <div class="col-lg-3 col-md-3 col-sm-3">
+                <div class="col-lg-3 col-md-3 col-sm-12">
                   <div class="single_whyus_top wow fadeInUp" style="text-align:center; color:#000;">
                     <div class="whyus_icon" style="font-size:45px;">
                       <span class="fa fa-flask"></span>
@@ -77,7 +78,7 @@
                     <p>when an unknown printer took a galley of type and scrambled it to make a type specimen book</p>
                   </div>
                 </div>
-                <div class="col-lg-3 col-md-3 col-sm-3">
+                <div class="col-lg-3 col-md-3 col-sm-12">
                   <div class="single_whyus_top wow fadeInUp" style="text-align:center; color:#000;">
                     <div class="whyus_icon" style="font-size:45px;">
                       <span class="fa fa-support"></span>
@@ -88,16 +89,17 @@
                 </div>
               </div>
               <!-- End Why us top content  -->
-            </div>
+            {{-- </div> --}}
           </div>
         </div>        
       </div>
+    {{-- </div> --}}
       <!-- End why us top -->
     </section>
 
 
     <section>  
-        <div class="container">
+        {{-- <div class="container"> --}}
           <div class="row">
             <div class="col-md-4">
               <hr style="background: #036096; padding: 3px;">
@@ -109,16 +111,16 @@
               <hr style="background: #036096; padding: 3px;">
             </div>		
           </div>
-        </div>
+        {{-- </div> --}}
     </section>
 
 
 
     <section>
-      <div class="container">
+      {{-- <div class="container-fluid"> --}}
         <!-- Our courses titile -->
         <div class="row">
-          <div class="col-lg-12 col-md-12"> 
+          <div class=" col-sm-12 col-lg-12 col-md-12"> 
             <div class="title_area">
               <h2 class="title_two" style="color:#02aeca; font-size:50px; text-align:center;text-decoration: underline;
               font-weight: bolder;">Our Tutors</h2>
@@ -126,70 +128,102 @@
             </div>
           </div>
         </div>
-        <div class="container">
-          <div class="row ">
-            <div class="tutor">
-              <img src="{{asset('website/img/team/05.jpg')}}" alt="Avatar" class="image">
-              <div class="overlay">
-                <div class="text">Hello I'm Najmin <br> Web Designer <br>& Developer</div>
+      <div class="row">
+        <div class="col-md-3 col-sm-12">
+          <div class="thumbnail tutor">
+            <a href="{{asset('website/img/team/05.jpg')}}">
+              <img src="{{asset('website/img/team/05.jpg')}}" alt="Lights" style="width:80%">
+              <div class="caption">
+                <p style="text-align: center;font-size: 18px;color: #000; font-weight: bold;">Hello I'm Najmin <br> Web Designer <br>& Developer<br>
+                <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus nisi tenetur illo aliquam quis natus omnis minima similique unde quo.</small></p>
               </div>
-            </div>
-            <div class="tutor">
-              <img src="{{asset('website/img/team/01.jpg')}}" alt="Avatar" class="image">
-              <div class="overlay">
-                <div class="text">Hello I'm Alax <br> Photographer</div>
-              </div>
-            </div>
-            <div class="tutor">
-              <img src="{{asset('website/img/team/02.jpg')}}" alt="Avatar" class="image">
-              <div class="overlay">
-                <div class="text">Hello I'm Rashu <br> Typing expart </div>
-              </div>
-            </div>
-            <div class="tutor">
-              <img src="{{asset('website/img/team/03.jpg')}}" alt="Avatar" class="image">
-              <div class="overlay">
-                <div class="text">Hello I'm Rafi <br> Web Designer </div>
-              </div>
-            </div>
+            </a>
           </div>
-          <div class="row ">
-              <div class="tutor">
-                <img src="{{asset('website/img/team/06.jpg')}}" alt="Avatar" class="image">
-                <div class="overlay">
-                  <div class="text">Hello I'm Taslima <br> Graphics Designer </div>
-                </div>
-              </div>
-              <div class="tutor">
-                <img src="{{asset('website/img/team/07.jpg')}}" alt="Avatar" class="image">
-                <div class="overlay">
-                  <div class="text">Hello I'm Alamgir <br> Database Designer</div>
-                </div>
-              </div>
-              <div class="tutor">
-                <img src="{{asset('website/img/team/04.jpg')}}" alt="Avatar" class="image">
-                <div class="overlay">
-                  <div class="text">Hello I'm Sumi <br> Network expart</div>
-                </div>
-              </div>
-              <div class="tutor">
-                <img src="{{asset('website/img/team/08.jpg')}}" alt="Avatar" class="image">
-                <div class="overlay">
-                  <div class="text">Hello I'm Saqline <br> UX/UI Designer </div>
-                </div>
-              </div>
-            </div>
         </div>
-        <!-- End Our courses titile -->
-
-        <!-- Start Our courses content -->
-        
-        <!-- End Our courses content -->
+        <div class="col-md-3  col-sm-12">
+          <div class="thumbnail">
+            <a href="{{asset('website/img/team/01.jpg')}}">
+              <img src="{{asset('website/img/team/01.jpg')}}" alt="Nature" style="width:80%">
+              <div class="caption">
+                <p style="text-align: center;font-size: 18px;color: #000; font-weight: bold;">Hello I'm Alax <br> Photographer<br>
+                <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus nisi tenetur illo aliquam quis natus omnis minima similique unde quo.</small></p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-3  col-sm-12">
+          <div class="thumbnail">
+            <a href="{{asset('website/img/team/02.jpg')}}">
+              <img src="{{asset('website/img/team/02.jpg')}}" alt="Fjords" style="width:80%">
+              <div class="caption">
+                <p style="text-align: center;font-size: 18px;color: #000; font-weight: bold;">Hello I'm Rashu <br> Typing expart<br>
+                <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus nisi tenetur illo aliquam quis natus omnis minima similique unde quo.</small></p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-3  col-sm-12">
+          <div class="thumbnail">
+            <a href="{{asset('website/img/team/03.jpg')}}">
+              <img src="{{asset('website/img/team/03.jpg')}}" alt="Fjords" style="width:80%">
+              <div class="caption">
+                <p style="text-align: center;font-size: 18px;color: #000; font-weight: bold;">Hello I'm Rafi <br> Web Designer<br>
+                <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus nisi tenetur illo aliquam quis natus omnis minima similique unde quo.</small></p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3  col-sm-12">
+          <div class="thumbnail">
+            <a href="{{asset('website/img/team/06.jpg')}}">
+              <img src="{{asset('website/img/team/06.jpg')}}" alt="Lights" style="width:80%">
+              <div class="">
+                <p style="text-align: center;font-size: 18px;color: #000; font-weight: bold;">Hello I'm Taslima <br> Graphics Designer<br>
+                <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus nisi tenetur illo aliquam quis natus omnis minima similique unde quo.</small></p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-3  col-sm-12">
+          <div class="thumbnail">
+            <a href="{{asset('website/img/team/07.jpg')}}">
+              <img src="{{asset('website/img/team/07.jpg')}}" alt="Nature" style="width:80%">
+              <div class="caption">
+                <p style="text-align: center;font-size: 18px;color: #000; font-weight: bold;">Hello I'm Alamgir <br> Database Designer<br>
+                <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus nisi tenetur illo aliquam quis natus omnis minima similique unde quo.</small></p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-3  col-sm-12">
+          <div class="thumbnail">
+            <a href="{{asset('website/img/team/04.jpg')}}">
+              <img src="{{asset('website/img/team/04.jpg')}}" alt="Fjords" style="width:80%">
+              <div class="caption">
+                <p style="text-align: center;font-size: 18px;color: #000; font-weight: bold;">Hello I'm Sumi <br> Network expart<br>
+                <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus nisi tenetur illo aliquam quis natus omnis minima similique unde quo.</small></p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-3  col-sm-12">
+          <div class="thumbnail">
+            <a href="{{asset('website/img/team/08.jpg')}}" class="tutor">
+              <img src="{{asset('website/img/team/08.jpg')}}" alt="Fjords" style="width:80%">
+              <div class="caption">
+                <p style="text-align: center;font-size: 18px;color: #000; font-weight: bold;">Hello I'm Saqline <br> UX/UI Designer <br>
+                <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus nisi tenetur illo aliquam quis natus omnis minima similique unde quo.</small></p>
+              </div>
+            </a>
+          </div>
+        </div>
       </div>
     </section>
 
     <section>  
-        <div class="container">
+        {{-- <div class="container"> --}}
           <div class="row">
             <div class="col-md-4">
               <hr style="background: #036096; padding: 3px;">
@@ -201,7 +235,7 @@
               <hr style="background: #036096; padding: 3px;">
             </div>		
           </div>
-        </div>
+        {{-- </div> --}}
     </section>
 
 

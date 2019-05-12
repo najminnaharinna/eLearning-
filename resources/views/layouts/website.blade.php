@@ -1,9 +1,9 @@
 @extends('layouts.master')
 
-<div class="container-fulid background">
-    <div class="row">
-      <div class="col-md-12 text-center">
-        <a class="navbar-brand" href="{{ url('home') }}" style="margin-top:15px; text-align:center;margin-left: 300px;"><span style="font-family: cursive;font-size: 30px;
+{{-- <div class="container-fulid background"> --}}
+    <div class="row" style="background:#4e808c;">
+      <div class="col-md-12 col-sm-12 text-center">
+        <a class="navbar-brand" href="{{ url('home') }}" style=""><span style="font-family: cursive;font-size: 30px;
             font-weight: bolder;color: #03f521;text-decoration: underline;">ONLINE</span> <span style="color:cyan; font-size: 32px;">Aducation</span></a>
         {{-- <P style="color: #000;">A HUGE SELECTION OF TICKETS ONLINE</P> --}}
           <ul class="top_header_social social_icon" style="float:right; margin-right:30px;">
@@ -16,12 +16,14 @@
       </div>
           
     </div>		
-</div>
+{{-- </div> --}}
 
 @section('menubar')
-
-<nav class="navbar navbar-expand-lg custome-nav-color ">
+<div class="container-fluid">
+  <nav class="navbar navbar-expand-lg custome-nav-color ">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon icon-bar"></span>
+        <span class="navbar-toggler-icon"></span>
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
@@ -50,7 +52,8 @@
             </li>
         </ul>
     </div>
-</nav>    
+  </nav>
+</div>    
 
 @endsection
 
@@ -67,15 +70,15 @@
 <footer style="background:#1f1f1f;">
         <!-- Start footer top area -->
         <div class="footer_top">
-          <div class="container" style="color:#fff;">
-            <div class="row">
-              <div class="col-ld-3  col-md-3 col-sm-3">
+          {{-- <div class="container" style="color:#fff;"> --}}
+            <div class="row" style="color:#fff;">
+              <div class="col-ld-3  col-md-3 col-sm-12">
                 <div class="single_footer_widget">
-                  <h3>About Us</h3>
+                  <h3 style="text-align: center;">About Us</h3>
                   <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
                 </div>
               </div>
-              <div class="col-ld-3  col-md-3 col-sm-3">
+              <div class="col-ld-3  col-md-3 col-sm-12">
                 <div class="single_footer_widget">
                   <h3 style="text-align: center;">Community</h3>
                   <ul class="footer_widget_nav" >
@@ -87,9 +90,9 @@
                   </ul>
                 </div>
               </div>
-              <div class="col-ld-3  col-md-3 col-sm-3">
+              <div class="col-ld-3  col-md-3 col-sm-12">
                 <div class="single_footer_widget">
-                  <h3 style="margin-left: 24px;">Others</h3>
+                  <h3 style="text-align: center;">Others</h3>
                   <ul class="footer_widget_nav">
                     <li><a href="#" class="color">Link 1</a></li>
                     <li><a href="#" class="color">Link 2</a></li>
@@ -99,9 +102,9 @@
                   </ul>
                 </div>
               </div>
-              <div class="col-ld-3  col-md-3 col-sm-3">
+              <div class="col-ld-3  col-md-3 col-sm-12">
                 <div class="single_footer_widget">
-                  <h3>Social Links</h3>
+                  <h3 style="text-align: center;">Social Links</h3>
                   <ul class="footer_social">
                     <li class="social_icon"><a href="#"><span class="fa fa-facebook"></span></a></li>
                     <li class="social_icon"><a data-toggle="tooltip" data-placement="top" title="Twitter" class="soc_tooltip"  href="#"><i class="fa fa-twitter"></i></a></li>
@@ -112,7 +115,7 @@
                 </div>
               </div>
             </div>
-          </div>
+          {{-- </div> --}}
         </div>
         <!-- End footer top area -->
 </footer>

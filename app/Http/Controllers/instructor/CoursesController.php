@@ -93,6 +93,7 @@ class CoursesController extends Controller
     {
         $formData = $request->only(['category_id', 'title', 'description']); 
         $course = Course::find($id);
+        // $course = Auth::user()->courses()->findOrFail($id);
 
         if( $request->hasFile('image') ) {
             unlink($course->image);
@@ -117,6 +118,7 @@ class CoursesController extends Controller
     public function destroy($id)
     {
         $course = Course::find($id);
+        // $course = Auth::user()->courses()->findOrFail($id);
         unlink($course->image);
         $course->delete();
         flash('Course Deleted Successfully')->success();

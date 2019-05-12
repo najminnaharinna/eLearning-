@@ -27,15 +27,14 @@
 <body>
 
   <!-- Page Wrapper -->
-  <div id="wrapper">
-
+  
+<div id="wrapper">
     @yield('sidebar')
 
+  <div id="content-wrapper" class="d-flex flex-column">
     <!-- Content Wrapper -->
-    <div id="content-wrapper" class="d-flex flex-column">
 
       <!-- Main Content -->
-      <div id="content">
 
         @yield('menubar')
 
@@ -45,19 +44,19 @@
 
         <!-- /.container-fluid -->
 
-      </div>
       <!-- End of Main Content -->
 
       @yield('footer')
-
+  </div>
+</div>
       <!-- Footer -->
       
       <!-- End of Footer -->
 
-    </div>
+  
     <!-- End of Content Wrapper -->
 
-  </div>
+
   <!-- End of Page Wrapper -->
 
   <!-- Scroll to Top Button-->

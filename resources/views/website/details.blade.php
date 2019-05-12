@@ -49,6 +49,7 @@
         <p style="margin-bottom:50px;"><a class="btn btn-info" href="{{ route('register') }}" style="font-size: 30px;font-weight: bolder;">APPLY NOW</a></p>
         @endif
       
+        {{--  --}}
       
     </div>
 </div>
